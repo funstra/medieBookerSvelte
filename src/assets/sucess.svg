@@ -1,0 +1,45 @@
+<svg width="262" height="262" viewBox="0 0 262 262" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+
+        @keyframes stroke-grow {
+            from {
+                stroke-width: 20;
+                stroke-opacity: 1;
+            }
+
+            to {
+                stroke-width: 30;
+                stroke-opacity: 0.75;
+                r: 115;
+            }
+        }
+
+        g {
+            --color0: hsl(var(--good-hue) var(--saturated) var(--light))
+            --color1: hsl(var(--good-hue) var(--saturated) var(--white))
+            transform-origin: center;
+            animation: fade-in 300ms 300ms forwards;
+            opacity: 0;
+        }
+        .outer{
+            animation: stroke-grow 300ms 600ms forwards;
+        }
+    </style>
+    <g>
+        <circle opacity="0" cx="131" cy="131" r="100" fill="var(--color0,#61CC3D)" />
+        <path
+            d="M122.348 166.723C124.689 166.723 126.515 165.81 127.785 163.905L164.935 106.434C165.887 105.006 166.244 103.735 166.244 102.505C166.244 99.3696 163.942 97.1073 160.727 97.1073C158.505 97.1073 157.155 97.9011 155.806 100.044L122.189 153.308L104.964 131.478C103.654 129.851 102.304 129.137 100.36 129.137C97.1051 129.137 94.7634 131.439 94.7634 134.614C94.7634 136.003 95.2397 137.313 96.3907 138.702L116.95 164.024C118.458 165.889 120.125 166.723 122.348 166.723Z"
+            fill="white" />
+        <circle class="outer" cx="131" cy="131" r="110" fill="none" stroke-width="20" stroke="var(--color1,#DAF2DC)" />
+    </g>
+</svg>

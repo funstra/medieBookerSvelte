@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* touch-action: none; */
+}
+@font-face {
+  font-family: icons;
+  src: url("./assets/icons.woff");
+}
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+ul,
+li {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+}
+html,
+body,
+#app,
+main {
+  height: 100%;
+}
+
+html {
+  font-family: monospace;
+
+  --black: 10%;
+  --dark: 40%;
+  --light: 70%;
+  --white: 95%;
+
+  --saturated: 90%;
+  --desaturated: 15%;
+
+  --main-hue: 215;
+  --secondary-hue: 40;
+
+  --good-hue: 125;
+  --bad-hue: 10;
+}
+
+body {
+  line-height: 1;
+  color: hsl(0 0% var(--black));
+}
+main {
+  overflow: hidden;
+}
+
+input[type="checkbox"]{
+  display: none;
+}
