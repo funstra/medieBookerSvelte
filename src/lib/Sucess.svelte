@@ -16,13 +16,14 @@
   });
 </script>
 
-<div style="margin-block: auto;">
+<div style="margin-block: auto; display: flex; justify-content: center;">
   <svg
-    width="100%"
+    width="75%"
     height="100%"
     viewBox="0 0 262 262"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    style="overflow: visible;"
   >
     <style>
       @keyframes fade-in {
