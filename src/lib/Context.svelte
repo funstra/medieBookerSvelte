@@ -47,10 +47,11 @@
         </p>
       </div>
     {/if}
-
-    <div class="back" on:pointerdown|stopPropagation={handleBack}>
-      &ShortDownArrow;
-    </div>
+    {#if $contextView != "bookReceipt"}
+      <div class="back" on:pointerdown|stopPropagation={handleBack}>
+        &ShortDownArrow;
+      </div>
+    {/if}
   </div>
 </div>
 
