@@ -66,7 +66,9 @@
   }
   li button {
     padding: 1ch;
+    background-color: hsl(0 0% var(--white));
     border: 1px currentColor solid;
+    border-radius: 3px;
   }
   li.selected button {
     color: hsl(var(--main-hue) var(--saturated) var(--light));

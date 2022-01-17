@@ -32,7 +32,7 @@ const data = [
 
 
 const createProducts = () => {
-    const { subscribe, update } = writable(data)
+    const { subscribe, set, update } = writable(data)
     return {
         subscribe,
         increment: id => update(products => {
@@ -40,6 +40,9 @@ const createProducts = () => {
         }),
         decrement: id => update(products => {
             return products.map(product => product.product.id === id ? ({ ...product, n: Math.max(product.n - 1, 0) }) : product)
+        }),
+        reset: () => update(products => {
+            return products.map(product => ({ ...product, n: 0 }))
         })
     }
 }

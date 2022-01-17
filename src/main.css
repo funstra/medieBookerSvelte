@@ -36,18 +36,20 @@ main {
 html {
   font-family: monospace;
 
-  --black: 10%;
-  --dark: 40%;
-  --light: 70%;
-  --white: 95%;
+  --black: 25%;
+  --dark: 50%;
+  --light: 80%;
+  --lighter: 87.5%;
+  --white: 97.5%;
 
   --saturated: 90%;
+  --mid: 50%;
   --desaturated: 15%;
 
   --main-hue: 215;
   --secondary-hue: 40;
 
-  --good-hue: 125;
+  --good-hue: 120;
   --bad-hue: 10;
 }
 
@@ -59,6 +61,6 @@ main {
   overflow: hidden;
 }
 
-input[type="checkbox"]{
+input[type="checkbox"] {
   display: none;
 }

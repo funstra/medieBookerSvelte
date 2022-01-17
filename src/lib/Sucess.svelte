@@ -1,5 +1,5 @@
 <script>
-  import { contextView, drawerState } from "../store";
+  import { contextView, drawerState, products } from "../store";
 
   import { onMount } from "svelte";
 
@@ -12,6 +12,7 @@
       setTimeout(() => {
         showReceipt(true);
       }, 200);
+      products.reset();
     }, 1950);
   });
 </script>

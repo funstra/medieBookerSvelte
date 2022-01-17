@@ -42,7 +42,7 @@
     text-transform: uppercase;
 
     border-radius: 50%/100%;
-    background-color: hsl(var(--hue) 0% 92.5%);
+    background-color: hsl(var(--hue) 0% var(--lighter));
     color: hsl(var(--hue) 0% 40%);
 
     cursor: pointer;
@@ -52,8 +52,8 @@
     -webkit-tap-highlight-color: transparent;
   }
   :global(.checked) .pill {
-    background-color: hsl(var(--hue) 50% 70%);
-    color: hsl(var(--hue) 80% 95%);
+    background-color: hsl(var(--hue) var(--mid) var(--light));
+    color: hsl(var(--hue) var(--desaturated) var(--white));
   }
 
   .pill > * {
@@ -87,7 +87,7 @@
 
   :global(.checked) .pill .circle {
     left: calc((100% - var(--padding) * 50%) - (var(--h) * var(--c-h)));
-    background-color: hsl(var(--hue) 50% 90%);
+    background-color: hsl(var(--hue) var(--mid) var(--white));
   }
 
   .pill .circle {
@@ -101,7 +101,7 @@
     aspect-ratio: 1/1;
 
     border-radius: 50%;
-    background-color: hsl(var(--hue) 0% 80%);
+    background-color: hsl(var(--hue) 0% var(--dark));
 
     transition: all 125ms;
   }

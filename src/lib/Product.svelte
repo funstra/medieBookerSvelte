@@ -95,6 +95,7 @@
   class:selected={n > 0}
   class:gracing
   class:outsideRange
+  class:saturated={n === product.available}
   style={`--dur:${pressDuration - gracePeriod}ms`}
   on:pointerdown|stopPropagation={handleDown}
   on:pointercancel|stopPropagation={handleCancel}
@@ -108,6 +109,9 @@
       <h3>{product.name}</h3>
       <div>{product.category}</div>
     </li>
+    <div class="available" style="align-self: end;">
+      {product.available}/<span class="n">{n}</span>
+    </div>
   </ul>
   {#if outsideRange}
     <p>
@@ -121,9 +125,9 @@
       >
     </p>
   {/if}
-  <div class="available" style="margin-left: auto;align-self: center;">
+  <!-- <div class="available" style="margin-left: auto;align-self: center;">
     {product.available}/{n}
-  </div>
+  </div> -->
 </li>
 
 <style>
@@ -160,7 +164,12 @@
     filter: brightness(1.125);
   }
   .selected .img {
-    --img-col: hsl(var(--good-hue) var(--saturated) var(--white));
+    --img-col: hsl(var(--good-hue) var(--mid) var(--white));
+    padding: 0.25em;
+  }
+  .saturated .img {
+    --img-col: hsl(var(--good-hue) var(--mid) var(--light));
+    padding: 0;
   }
   .product.selected {
     --col: hsl(var(--good-hue) var(--saturated) var(--light));
@@ -170,7 +179,8 @@
     touch-action: pan-y;
     will-change: opacity;
     --img-col: white;
-    --col: transparent;
+    /* --col: transparent; */
+    --col: hsl(var(--secondary-hue) var(--desaturated) var(--light) / 0.25);
 
     height: 70px;
 
@@ -193,8 +203,10 @@
     height: 100%;
     aspect-ratio: 1/1;
 
+    padding: 0.5em;
+
     background-color: var(--img-col);
-    transition: background-color var(--dur);
+    transition: background-color var(--dur), padding 175ms;
   }
   img {
     mix-blend-mode: multiply;
@@ -209,6 +221,23 @@
     justify-content: space-between;
 
     padding: 0.25em;
+  }
+  .available {
+    font-size: 1.5em;
+    letter-spacing: -0.1em;
+    margin-right: 0.5em;
+    margin-bottom: 0.25em;
+    color: hsl(0 0% var(--dark));
+  }
+  .available .n {
+    color: hsl(0 0% var(--light));
+    font-size: 0.75em;
+  }
+  .selected .available .n {
+    color: hsl(var(--main-hue) var(--mid) var(--light));
+  }
+  .saturated .available .n {
+    font-size: 1em;
   }
   .info > :first-child {
     display: flex;
