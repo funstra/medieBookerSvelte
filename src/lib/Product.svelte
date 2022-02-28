@@ -18,7 +18,7 @@
   let selecting = false;
   const handleDown =
     /**@param {PointerEvent} pe */
-    (pe) => {
+    pe => {
       if (!outsideRange) {
         x = 0;
         /**@type {HTMLElement}*/ // @ts-ignore
@@ -32,7 +32,7 @@
 
         const { innerWidth } = window;
         const startX = pe.clientX;
-        target.onpointermove = (pe) => {
+        target.onpointermove = pe => {
           x = (startX - pe.clientX) / innerWidth;
           if (x > 0.05) {
             selecting = true;
@@ -63,10 +63,10 @@
 
   const handleCancel =
     /**@param {PointerEvent} pe*/
-    (pe) => {};
+    pe => {};
   const handleUp =
     /**@param {PointerEvent} pe*/
-    (pe) => {
+    pe => {
       if (!outsideRange) {
         cancel = true;
         x = 0;
@@ -102,7 +102,11 @@
   on:pointerup|stopPropagation={handleUp}
 >
   <div class="img">
-    <img src={product.imgPath} alt="" />
+    <img
+      type="image/webp"
+      src={`${product.imgPath}-384w.webp`}
+      alt={product.name}
+    />
   </div>
   <ul class="info">
     <li>

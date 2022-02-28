@@ -17,12 +17,12 @@ const randomDateRange = () => {
 
 let uid = 0
 const data = [
-    { id: uid++, imgPath: 'img/camera/canon_eos_60d.jpg', name: "Canon EOS 60D", category: "camera", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, accusantium?", available: 3, reserved: randomDateRange() },
-    { id: uid++, imgPath: 'img/camera/lumix_gx7.jpg', name: "Lumix GX7", category: "camera", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, accusantium?", available: 3, reserved: randomDateRange() },
-    { id: uid++, imgPath: 'img/camera/panasonic_ag-hpx500.jpg', name: "Panasonic AG-HPX500", category: "camera", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, accusantium?", available: 3, reserved: randomDateRange() },
-    { id: uid++, imgPath: 'img/portaaudio/zoom_f8n.jpg', name: "Zoom f8n", category: "portaaudio", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, accusantium?", available: 3, reserved: randomDateRange() },
-    { id: uid++, imgPath: 'img/portaaudio/zoom_h4.jpg', name: "Zoom h4", category: "portaaudio", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, accusantium?", available: 3, reserved: randomDateRange() },
-    { id: uid++, imgPath: 'img/portaaudio/soundDevices_744T.webp', name: "Sound Devices 744t", category: "portaaudio", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, accusantium?", available: 3, reserved: randomDateRange() },
+    { id: uid++, imgPath: 'img/camera/canon_eos_60d', name: "Canon EOS 60D", category: "camera", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, accusantium?", available: 3, reserved: randomDateRange() },
+    { id: uid++, imgPath: 'img/camera/lumix_gx7', name: "Lumix GX7", category: "camera", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, accusantium?", available: 3, reserved: randomDateRange() },
+    { id: uid++, imgPath: 'img/camera/panasonic_ag-hpx500', name: "Panasonic AG-HPX500", category: "camera", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, accusantium?", available: 3, reserved: randomDateRange() },
+    { id: uid++, imgPath: 'img/portaaudio/zoom_f8n', name: "Zoom f8n", category: "portaaudio", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, accusantium?", available: 3, reserved: randomDateRange() },
+    { id: uid++, imgPath: 'img/portaaudio/zoom_h4', name: "Zoom h4", category: "portaaudio", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, accusantium?", available: 3, reserved: randomDateRange() },
+    { id: uid++, imgPath: 'img/portaaudio/soundDevices_744T', name: "Sound Devices 744t", category: "portaaudio", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, accusantium?", available: 3, reserved: randomDateRange() },
 ].map(product => {
     return {
         n: 0,
